@@ -3,8 +3,14 @@
 - include: "*.view.lookml"       # include all the views
 - include: "*.dashboard.lookml"  # include all the dashboards
 
-- explore: d_individual_profile
-  label: People Profiles
+# - explore: d_individual_profile
+#   label: 'People Profiles'
+#   joins:
+#     - join: d_postal_code
+#       type: left_outer
+#       relationship: many_to_one
+#       sql_on: ${d_individual_profile.postal_cd}=${d_postal_code.postal_cd}
+#       view_label: 'D Individual Profile'
 
 # - explore: d_address
 # 
